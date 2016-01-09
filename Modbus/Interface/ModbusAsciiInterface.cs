@@ -174,7 +174,9 @@ namespace Osre.Modbus.Interface
          System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();
          byte[] bytesToSend = encoder.GetBytes(ascii_telegram);
 #if NETMF
+#if DEBUG
          Debug.Print("TelegramLength: " + telegramLength.ToString());
+#endif
 #endif
           var lrc = ModbusUtils.CalcLrc(buffer, 0, (telegramLength - 2));
 
@@ -182,7 +184,9 @@ namespace Osre.Modbus.Interface
          encoder = new System.Text.UTF8Encoding();
          bytesToSend = encoder.GetBytes(ascii_telegram);
 #if NETMF
+#if DEBUG
           Debug.Print(ascii_telegram);
+#endif
 #endif
 
          // ticks and _NextSend are multiples of 100 ns
@@ -241,12 +245,16 @@ namespace Osre.Modbus.Interface
          {
             desiredLength = (short)((desiredDataLength * 2) + 9);
 #if NETMF
-                Debug.Print("desiredlength = " + desiredLength.ToString());
+#if DEBUG
+             Debug.Print("desiredlength = " + desiredLength.ToString());
+#endif
 #endif
              if (desiredLength > buffer.Length)
             {
 #if NETMF
+#if DEBUG
                 Debug.Print("desiredlength > buffer.length");
+#endif
 #endif
                throw new ArgumentException(String.Concat("buffer size (" , buffer.Length ,") must be at least 9 byte larger than desiredDataLength*2 (", desiredDataLength, ")"));
             }
@@ -278,7 +286,9 @@ namespace Osre.Modbus.Interface
                   n += _serial.Read(buffer, n, buffer.Length - n);
                }
 #if NETMF
+#if DEBUG
                 Debug.Print(new string(Encoding.UTF8.GetChars(buffer, 0, n)));
+#endif
 #endif
                // ASCII has 1 second nextRead limit
                nextRead = DateTime.Now.Ticks + 33333 * _halfCharLength;
@@ -295,7 +305,9 @@ namespace Osre.Modbus.Interface
             if (desiredLength > 0 && n == desiredLength)
             {
 #if NETMF
+#if DEBUG
                 Debug.Print("Read n chars: " + n.ToString() + " on " + desiredLength.ToString());
+#endif
 #endif
                 telegramLength = (short)n;
                 return true;
@@ -306,7 +318,9 @@ namespace Osre.Modbus.Interface
                 if (buffer[0] == 0x3A && buffer[n - 2] == 0x0D && buffer[n - 1] == 0x0A)
                 {
 #if NETMF
+#if DEBUG
                     Debug.Print("Read n chars: " + n.ToString() + " on " + desiredLength.ToString());
+#endif
 #endif              
                     telegramLength = (short)n;
                     return true;
@@ -320,7 +334,9 @@ namespace Osre.Modbus.Interface
             }
          }
 #if NETMF
+#if DEBUG
           Debug.Print("Timeout reading in Interface.");
+#endif
 #endif         
           telegramLength = 0;
          return false;
@@ -347,13 +363,17 @@ namespace Osre.Modbus.Interface
           int real_length = telegramLength;
           int virtual_length = 0;
 #if NETMF
+#if DEBUG
           Debug.Print("Real length: " + real_length.ToString());
+#endif
 #endif
 
           if (telegramLength < 11)
           {
 #if NETMF
+#if DEBUG
               Debug.Print("Received a Modbus Ascii packet too short.");
+#endif
 #endif
               throw new ModbusException(ModbusErrorCode.ResponseTooShort);
           }
@@ -361,7 +381,9 @@ namespace Osre.Modbus.Interface
           if (buffer[0] != 0x3A || buffer[real_length-2] != 0x0D || buffer[real_length-1] != 0x0A)
           {
 #if NETMF
+#if DEBUG
               Debug.Print("Received not a good Modbus Ascii packet.");
+#endif
 #endif
               throw new ModbusException(ModbusErrorCode.Unspecified);
           }
@@ -369,19 +391,25 @@ namespace Osre.Modbus.Interface
           for (int i = 1; i < real_length - 2; i += 2)
           {
 #if NETMF
+#if DEBUG
               Debug.Print("Char: " + ModbusUtils.ExtractAsciiAsByte(buffer, i).ToString());
+#endif
 #endif
               buffer[(i - 1) / 2] = ModbusUtils.ExtractAsciiAsByte(buffer, i);
           }
           virtual_length = (real_length - 1) / 2;
 #if NETMF
+#if DEBUG
           Debug.Print("Virtual length: " + virtual_length.ToString());
+#endif
 #endif
           var lrc = ModbusUtils.CalcLrc(buffer, 0, virtual_length - 2);
           if (buffer[virtual_length - 2] != lrc)
          {
 #if NETMF
+#if DEBUG
              Debug.Print("Modbus Ascii LRC ERROR.");
+#endif
 #endif
              throw new ModbusException(ModbusErrorCode.CrcError);
          }

@@ -56,7 +56,6 @@ namespace Osre.Modbus
       {
           byte value_extracted = 0;
 
-          if (isAscii(buffer[pos]))
           {
               if ((buffer[pos] >= 0x30) && (buffer[pos] <= 0x39))
               {
@@ -72,21 +71,10 @@ namespace Osre.Modbus
               }
               else
               {
-#if NETMF
-                  Debug.Print("Error Extracting Ascii: " + buffer[pos].ToString() + " at pos " + pos.ToString());
-#endif
                   throw new ModbusException(ModbusErrorCode.IllegalDataValue);
               }
           }
-          else
-          {
-#if NETMF
-              Debug.Print("Error Extracting Ascii: " + buffer[pos].ToString() + " at pos " + pos.ToString());
-#endif
-              throw new ModbusException(ModbusErrorCode.IllegalDataValue);
-          }
           value_extracted <<= 4;
-          if (isAscii(buffer[pos + 1]))
           {
               if ((buffer[pos + 1] >= 0x30) && (buffer[pos + 1] <= 0x39))
               {
@@ -102,18 +90,8 @@ namespace Osre.Modbus
               }
               else
               {
-#if NETMF
-                  Debug.Print("Error Extracting Ascii: " + buffer[pos + 1].ToString() + " at pos " + (pos + 1).ToString());
-#endif
                   throw new ModbusException(ModbusErrorCode.IllegalDataValue);
               }
-          }
-          else
-          {
-#if NETMF
-              Debug.Print("Error Extracting Ascii: " + buffer[pos + 1].ToString() + " at pos " + (pos + 1).ToString());
-#endif
-              throw new ModbusException(ModbusErrorCode.IllegalDataValue);
           }
           return value_extracted;
       }
@@ -190,16 +168,6 @@ namespace Osre.Modbus
           ascii += (hex_to_convert < 10 ? (char)(hex_to_convert + 0x30) : (char)(hex_to_convert + 0x41 - 10));
 
           return ascii;
-      }
-   
-       private static bool isAscii(byte value)
-      {
-          if ((value >= 0x30 && value <= 0x39) || (value >= 0x41 && value <= 0x46) || (value >= 0x61 && value <= 0x66))
-          {
-            return true;
-          }
-
-          return false;
       }
    }
 }
