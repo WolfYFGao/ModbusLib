@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modbus.Win", "Modbus\Modbus.Win.csproj", "{E395D88B-1F00-45F9-8CFB-8B7765237CC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modbus.Netmf", "Modbus\Modbus.Netmf.csproj", "{EEDE1388-4189-4206-8A45-CE03EBCA585F}"
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "ModbusLibHelp", "ModbusLibHelp\ModbusLibHelp.shfbproj", "{DBAF6A07-2916-41C8-A2F9-C6233D43E769}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2F6C9CB3-6B71-4C4E-A8F3-EDC01DC250B5}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E395D88B-1F00-45F9-8CFB-8B7765237CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E395D88B-1F00-45F9-8CFB-8B7765237CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E395D88B-1F00-45F9-8CFB-8B7765237CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E395D88B-1F00-45F9-8CFB-8B7765237CC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEDE1388-4189-4206-8A45-CE03EBCA585F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEDE1388-4189-4206-8A45-CE03EBCA585F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEDE1388-4189-4206-8A45-CE03EBCA585F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEDE1388-4189-4206-8A45-CE03EBCA585F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBAF6A07-2916-41C8-A2F9-C6233D43E769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBAF6A07-2916-41C8-A2F9-C6233D43E769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		remes_PD_PreReleasesDir = PreReleases
+		remes_PD_ReleasesDir = Releases
+		remes_PD_DevsDir = Devs
+		remes_PD_MainDir = Main
+		remes_PD_SolutionDescription = Modbus master/slave library for Windows and NETMF
+		remes_PD_RootDir = NETMF\Libs\ModbusLib2
+		remes_PD_CommonFileVersion = 1.0.3.0
+		remes_PD_CommonAssemblyVersion = 1.0.3.*
+		remes_PD_CommonAssemblyCompany = OSRE
+		remes_PD_CommonAssemblyCopyright = Copyright © Reinhard Ostermeier 2014 - 2015
+		remes_PD_PDEnabled = True
+	EndGlobalSection
+EndGlobal

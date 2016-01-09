@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="035442f5-bf39-40b9-9ae5-cd44b7f171db" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>
+        Version V1.0.3.0 was released on 2015-09-02.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>If read/write pin is needed for serial transceiver, set it to write when idle for master</para>
+          </listItem>
+          <listItem>
+            <para>Make compilable in VS2015</para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="4003ea3f-5730-415e-b77f-49d54e2361c3" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

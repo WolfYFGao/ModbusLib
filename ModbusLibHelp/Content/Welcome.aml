@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="9cc691ba-73f7-43da-8b4e-c538e7932c5c" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>
+        This library allows to access Modbus RTU or TCP devices and also to implement a Modbus RTU or TCP device.
+        The library contains projects to support NETMF (4.2/4.3) and Windows (.NET 4.0 Client Profile).
+      </para>
+		</introduction>
+
+		<section>
+			<title>Getting Started</title>
+			<content>
+				<para>tbd.</para>
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="4003ea3f-5730-415e-b77f-49d54e2361c3" />
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

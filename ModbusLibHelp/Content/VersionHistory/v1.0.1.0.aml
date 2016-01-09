@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="4e30fc38-c2b7-4f95-9c60-d6755957ba4f" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>
+        Version V1.0.1.0 was released on 2014-11-18.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>Added Modbus Gateway functionality</para>
+          </listItem>
+          <listItem>
+            <para>Added optional digital output pin to ModbusRtuInterface to control read/write mode</para>
+          </listItem>
+          <listItem>
+            <para>Improved TCP code</para>
+          </listItem>
+          <listItem>
+            <para>Added Help project</para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="4003ea3f-5730-415e-b77f-49d54e2361c3" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

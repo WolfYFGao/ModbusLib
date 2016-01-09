@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="823d6ea0-97fc-468e-90ca-da27017c7e51" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+   <introduction>
+      <para>
+        Version V1.0.2.0 was released on 2015-04-09.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>Close and reopen serial port in RTU Interface for NETMF when an ArgumentException occurs on Write.</para>
+          </listItem>
+          <listItem>
+            <para>Fix ModbusTcpInterface.IsConnectionOk for NETMF, so it actively checks if the connection is ok.</para>
+          </listItem>
+          <listItem>
+            <para>ModbusDevice main loop checks if the interface.IsConnectionOk flag is true. If not, the interface is removed.
+              By this if a TCP client disconnects from the device, the interface for this client is closed and removed.
+              Before the connections stacked up which caused several nasty side effects.
+            </para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="4003ea3f-5730-415e-b77f-49d54e2361c3" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

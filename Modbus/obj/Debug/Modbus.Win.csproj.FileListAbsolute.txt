@@ -1,0 +1,5 @@
+C:\Users\Michele\Downloads\NET MF Modbus\880_1298_ModbusLib\ModbusLib\Debug\Modbus.Win.dll
+C:\Users\Michele\Downloads\NET MF Modbus\880_1298_ModbusLib\ModbusLib\Debug\Modbus.Win.pdb
+C:\Users\Michele\Downloads\NET MF Modbus\880_1298_ModbusLib\ModbusLib\Modbus\obj\Debug\Modbus.Win.csprojResolveAssemblyReference.cache
+C:\Users\Michele\Downloads\NET MF Modbus\880_1298_ModbusLib\ModbusLib\Modbus\obj\Debug\Modbus.Win.dll
+C:\Users\Michele\Downloads\NET MF Modbus\880_1298_ModbusLib\ModbusLib\Modbus\obj\Debug\Modbus.Win.pdb

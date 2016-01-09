@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="9cc691ba-73f7-43da-8b4e-c538e7932c5c" visible="True" isDefault="true" title="Welcome to the Modbus RTU/TCP Master/SLave library">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="Welcome" />
+    </HelpKeywords>
+  </Topic>
+  <Topic id="4003ea3f-5730-415e-b77f-49d54e2361c3" visible="True" isExpanded="true" title="Version History">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="version, history" />
+    </HelpKeywords>
+    <Topic id="d57e3a92-595b-49b7-a29c-e20109133dd1" visible="True" title="Version 1.0.0.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 1.0.0.0" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="4e30fc38-c2b7-4f95-9c60-d6755957ba4f" visible="True" title="Version 1.0.1.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 1.0.1.0" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="823d6ea0-97fc-468e-90ca-da27017c7e51" visible="True" isSelected="true" title="Version 1.0.2.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 1.0.2.0" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="035442f5-bf39-40b9-9ae5-cd44b7f171db" visible="True" title="Version 1.0.3.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version,1.0.3.0" />
+      </HelpKeywords>
+    </Topic>
+  </Topic>
+</Topics>
